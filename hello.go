@@ -5,6 +5,8 @@ import (
 )
 
 func main() {
+	fmt.Println("\033[2J")
+
 	nome := "Ricardo"
 	versao := 2.3
 
@@ -18,11 +20,15 @@ func main() {
 
 	var comando int
 
-	// No Scanf é necessário informar o tipo a ser utilizado para variável comando
-	// fmt.Scanf("%d", &comando)
-
 	fmt.Scan(&comando)
 
-	fmt.Println("O endereço de memória da variável comando é", &comando)
-	fmt.Println("O comando digitado foi", comando)
+	if comando == 1 {
+		fmt.Println("Monitorando...")
+	} else if comando == 2 {
+		fmt.Println("Exibindo Logs...")
+	} else if comando == 0 {
+		fmt.Println("Saindo do Sistema...")
+	} else {
+		fmt.Println("Não conheço o seu comando...")
+	}
 }
