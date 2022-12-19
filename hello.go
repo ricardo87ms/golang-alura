@@ -9,25 +9,28 @@ import (
 func main() {
 
 	exibeIntroducao()
-	exibeMenu()
 
-	comando := leComando()
+	for {
+		exibeMenu()
 
-	switch comando {
+		comando := leComando()
 
-	case 1:
-		iniciaMonitoramento()
-		break
-	case 2:
-		fmt.Println("Exibindo Logs...")
+		switch comando {
 
-	case 0:
-		fmt.Println("Saindo do Sistema...")
-		os.Exit(0)
+		case 1:
+			iniciaMonitoramento()
+			break
+		case 2:
+			fmt.Println("Exibindo Logs...")
 
-	default:
-		fmt.Println("Não conheço o seu comando...")
-		os.Exit(-1)
+		case 0:
+			fmt.Println("Saindo do Sistema...")
+			os.Exit(0)
+
+		default:
+			fmt.Println("Não conheço o seu comando...")
+			os.Exit(-1)
+		}
 	}
 }
 
@@ -58,7 +61,7 @@ func leComando() int {
 func iniciaMonitoramento() {
 	fmt.Println("Monitorando...")
 
-	site := "https://www.alura.com.br/dffsd154"
+	site := "https://www.alura.com.br"
 
 	resp, _ := http.Get(site)
 
