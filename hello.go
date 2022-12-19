@@ -10,9 +10,9 @@ func main() {
 	exibeIntroducao()
 	exibeMenu()
 
-	nome, idade := devolveNomeIdade()
+	nome, _ := devolveNomeIdade()
 
-	fmt.Println("nome: ", nome, " idade ", idade)
+	fmt.Println("nome: ", nome)
 
 	comando := leComando()
 
