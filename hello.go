@@ -10,12 +10,16 @@ func main() {
 	exibeIntroducao()
 	exibeMenu()
 
+	nome, idade := devolveNomeIdade()
+
+	fmt.Println("nome: ", nome, " idade ", idade)
+
 	comando := leComando()
 
 	switch comando {
 
 	case 1:
-		fmt.Println("Monitorando...")
+		iniciaMonitoramento()
 		break
 	case 2:
 		fmt.Println("Exibindo Logs...")
@@ -52,4 +56,15 @@ func leComando() int {
 	fmt.Scan(&comandoLido)
 
 	return comandoLido
+}
+
+func iniciaMonitoramento() {
+	fmt.Println("Monitorando...")
+}
+
+func devolveNomeIdade() (string, int) {
+	nome := "Ricardo"
+	idade := 35
+
+	return nome, idade
 }
