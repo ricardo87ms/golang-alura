@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 	"os"
 )
 
@@ -9,10 +10,6 @@ func main() {
 
 	exibeIntroducao()
 	exibeMenu()
-
-	nome, _ := devolveNomeIdade()
-
-	fmt.Println("nome: ", nome)
 
 	comando := leComando()
 
@@ -60,11 +57,14 @@ func leComando() int {
 
 func iniciaMonitoramento() {
 	fmt.Println("Monitorando...")
-}
 
-func devolveNomeIdade() (string, int) {
-	nome := "Ricardo"
-	idade := 35
+	site := "https://www.alura.com.br/dffsd154"
 
-	return nome, idade
+	resp, _ := http.Get(site)
+
+	if resp.StatusCode == 200 {
+		fmt.Println("O site", site, "foi carregado com sucesso!!!")
+	} else {
+		fmt.Println("O site", site, "não foi carregado. Status code:", resp.StatusCode)
+	}
 }
