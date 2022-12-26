@@ -1,0 +1,4 @@
+https://www.alura.com.br
+http://localhost:3000
+https://google.com
+https://www.casadocodigo.com.br
