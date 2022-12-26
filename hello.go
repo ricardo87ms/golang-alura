@@ -74,11 +74,13 @@ func iniciaMonitoramento() {
 }
 
 func exibeNomes() {
-	var nomes [4]string
-
-	nomes[0] = "Ricardo"
-	nomes[1] = "Tatiele"
-	nomes[2] = "Ana"
-
+	nomes := []string{"Ricardo", "Tatiele", "Ana"}
 	fmt.Println(nomes)
+	fmt.Println("Total de itens:", len(nomes))
+	fmt.Println("Capaciadade itens:", cap(nomes))
+
+	nomes = append(nomes, "Novo nome")
+	fmt.Println(nomes)
+	fmt.Println("Total de itens:", len(nomes))
+	fmt.Println("Capaciadade itens:", cap(nomes))
 }
