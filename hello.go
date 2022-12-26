@@ -3,35 +3,36 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"os"
 )
 
 func main() {
 
-	exibeIntroducao()
+	exibeNomes()
 
-	for {
-		exibeMenu()
+	// exibeIntroducao()
 
-		comando := leComando()
+	// for {
+	// 	exibeMenu()
 
-		switch comando {
+	// 	comando := leComando()
 
-		case 1:
-			iniciaMonitoramento()
-			break
-		case 2:
-			fmt.Println("Exibindo Logs...")
+	// 	switch comando {
 
-		case 0:
-			fmt.Println("Saindo do Sistema...")
-			os.Exit(0)
+	// 	case 1:
+	// 		iniciaMonitoramento()
+	// 		break
+	// 	case 2:
+	// 		fmt.Println("Exibindo Logs...")
 
-		default:
-			fmt.Println("Não conheço o seu comando...")
-			os.Exit(-1)
-		}
-	}
+	// 	case 0:
+	// 		fmt.Println("Saindo do Sistema...")
+	// 		os.Exit(0)
+
+	// 	default:
+	// 		fmt.Println("Não conheço o seu comando...")
+	// 		os.Exit(-1)
+	// 	}
+	// }
 }
 
 func exibeIntroducao() {
@@ -70,4 +71,14 @@ func iniciaMonitoramento() {
 	} else {
 		fmt.Println("O site", site, "não foi carregado. Status code:", resp.StatusCode)
 	}
+}
+
+func exibeNomes() {
+	var nomes [4]string
+
+	nomes[0] = "Ricardo"
+	nomes[1] = "Tatiele"
+	nomes[2] = "Ana"
+
+	fmt.Println(nomes)
 }
