@@ -3,36 +3,40 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
+	"time"
 )
+
+const monitoramento = 3
+const delay = 5
 
 func main() {
 
-	exibeNomes()
+	exibeIntroducao()
 
-	// exibeIntroducao()
+	for {
+		exibeMenu()
 
-	// for {
-	// 	exibeMenu()
+		comando := leComando()
 
-	// 	comando := leComando()
+		switch comando {
 
-	// 	switch comando {
+		case 1:
+			iniciaMonitoramento()
+			break
+		case 2:
+			fmt.Println("Exibindo Logs...")
 
-	// 	case 1:
-	// 		iniciaMonitoramento()
-	// 		break
-	// 	case 2:
-	// 		fmt.Println("Exibindo Logs...")
+		case 0:
+			fmt.Println("Saindo do Sistema...")
+			os.Exit(0)
 
-	// 	case 0:
-	// 		fmt.Println("Saindo do Sistema...")
-	// 		os.Exit(0)
-
-	// 	default:
-	// 		fmt.Println("Não conheço o seu comando...")
-	// 		os.Exit(-1)
-	// 	}
-	// }
+		default:
+			fmt.Println("Não conheço o seu comando...")
+			os.Exit(-1)
+		}
+		fmt.Println("")
+	}
 }
 
 func exibeIntroducao() {
@@ -62,7 +66,18 @@ func leComando() int {
 func iniciaMonitoramento() {
 	fmt.Println("Monitorando...")
 
-	site := "https://www.alura.com.br"
+	sites := []string{"https://www.alura.com.br", "https://google.com", "https://facebook.com"}
+
+	for i := 0; i < monitoramento; i++ {
+		for _, site := range sites {
+			testaSite(site)
+		}
+		fmt.Println("")
+		time.Sleep(delay * time.Second)
+	}
+}
+
+func testaSite(site string) {
 
 	resp, _ := http.Get(site)
 
@@ -71,16 +86,4 @@ func iniciaMonitoramento() {
 	} else {
 		fmt.Println("O site", site, "não foi carregado. Status code:", resp.StatusCode)
 	}
-}
-
-func exibeNomes() {
-	nomes := []string{"Ricardo", "Tatiele", "Ana"}
-	fmt.Println(nomes)
-	fmt.Println("Total de itens:", len(nomes))
-	fmt.Println("Capaciadade itens:", cap(nomes))
-
-	nomes = append(nomes, "Novo nome")
-	fmt.Println(nomes)
-	fmt.Println("Total de itens:", len(nomes))
-	fmt.Println("Capaciadade itens:", cap(nomes))
 }
