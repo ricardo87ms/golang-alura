@@ -1,8 +1,8 @@
-# Curso: Go: a linguagem do Google
+# Curso: Go: Orientação a Objetos
 
 ## Instituição: Alura
 
-Projeto do curso Go: a linguagem do Google.
+Projeto do curso Go: Orientação a Objetos.
 
 ## Começando
 
@@ -31,7 +31,7 @@ cd 02-go-orientacao-a-objetos
 ```
 
 ```
-go run hello.go
+go run main.go
 ```
 
 ## Desenvolvimento
@@ -45,9 +45,7 @@ Caso seja necessário trocar a pasta padrão do GOLANG, ir até as variáveis de
 ### Comandos utilizados
 
 ```
-go build hello.go
-
-go run hello.go
+go run main.go
 ```
 
 ## Contribuição
