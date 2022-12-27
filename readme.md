@@ -1,50 +1,23 @@
-# Curso: Go: a linguagem do Google
+# Formação Alura - Go: a linguagem de programação do Google
 
-## Instituição: Alura
+Repositório dos cursos que fazem parte da formação **Go: a linguagem de programação do Google** da instituição **Alura**.
 
-Projeto do curso Go: a linguagem do Google.
+## Cursos
 
-## Começando
+* [Go: a linguagem do Google](01-go-a-linguagem-do-google) - ✅ [Certificado](https://cursos.alura.com.br/certificate/ricardo87ms/golang)
 
-### Pré-requisitos
 
--   Linguagem GO
+## Linguagem
 
-### Instalação
+Neste curso, a linguagem de programação utilizada foi **Go Lang**.
 
-Para realizar a instalação deste projeto, utilize os comandos abaixo para clonar o repositório e confirar o projeto.
+## Informações
 
-Clonando o projeto:
-
-```
-git clone PROJETO
-```
-
-Acesse o projeto:
-
-```
-cd golang-alura
-```
-
-## Desenvolvimento
-
-Este projeto está sendo desenvolvido utilizando o Visual Studio Code.
-
-### Anotações
-
-Caso seja necessário trocar a pasta padrão do GOLANG, ir até as variáveis de ambiente e altera a variável GOPATH, nesta pasta é necessário criar as subpastas “bin”, “pkg” e “src”.
-
-### Comandos utilizados
-
-```
-go build hello.go
-
-go run hello.go
-```
+Este projeto está sendo desenvolvido com o **Visual Studio Code**.
 
 ## Contribuição
 
-Os códigos utilizados neste projeto fazem parte do estudo de um curso, não são necessárias contribuições, mais caso tenha interesse, é só enviar um pull request.
+Projeto de estudos.
 
 ## Autor
 
