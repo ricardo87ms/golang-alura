@@ -9,40 +9,23 @@ type ContaCorrente struct {
 	saldo         float64
 }
 
+func (c *ContaCorrente) Sacar(valorSaque float64) string {
+	podeSacar := valorSaque > 0 && valorSaque <= c.saldo
+
+	if !podeSacar {
+		return "Valor negativo ou você não possuí saldo sulficiente."
+	}
+
+	c.saldo -= valorSaque
+
+	return "Valor sacado com sucesso"
+}
+
 func main() {
 
-	// var contaRicardo ContaCorrente = ContaCorrente{}
-	// contaRicardo := ContaCorrente{titular: "Ricardo", numeroAgencia: 222, numeroConta: 111111, saldo: 150.5}
-	// contaRicardo := ContaCorrente{titular: "Ricardo", saldo: 150.5}
+	contaRicardo := ContaCorrente{"Ricardo", 222, 333, 300}
 
-	contaTatiele := ContaCorrente{"Tatiele", 222, 1111, 220.3}
-	contaTatiele2 := ContaCorrente{"Tatiele", 222, 1111, 220.3}
-
-	// fmt.Println(contaRicardo)
-	// Comparando na declaração do Go
-	fmt.Println(contaTatiele, contaTatiele2)
-	fmt.Println(contaTatiele == contaTatiele2)
-
-	var contaAna *ContaCorrente
-	contaAna = new(ContaCorrente)
-	contaAna.titular = "Ana"
-	contaAna.saldo = 52.3
-
-	var contaRicardo *ContaCorrente
-	contaRicardo = new(ContaCorrente)
-	contaRicardo.titular = "Ricardo"
-	contaRicardo.saldo = 60.30
-
-	var contaRicardo2 *ContaCorrente
-	contaRicardo2 = new(ContaCorrente)
-	contaRicardo2.titular = "Ricardo"
-	contaRicardo2.saldo = 60.30
-
-	// Comparando na declaração normal do Go
-	fmt.Println(contaRicardo, contaRicardo2)
-	fmt.Println(contaRicardo == contaRicardo2)
-	fmt.Println(*contaRicardo == *contaRicardo2)
-
-	//fmt.Println(*contaAna)
-	//fmt.Println(*contaRicardo)
+	fmt.Println(contaRicardo.saldo)
+	fmt.Println(contaRicardo.Sacar(-200))
+	fmt.Println(contaRicardo.saldo)
 }
