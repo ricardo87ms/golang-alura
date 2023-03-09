@@ -35,7 +35,8 @@ func main() {
 
 	contaRicardo := ContaCorrente{"Ricardo", 222, 333, 300}
 
+	status, saldo := contaRicardo.Depositar(300)
+
 	fmt.Println(contaRicardo.saldo)
-	fmt.Println(contaRicardo.Depositar(-200))
-	fmt.Println(contaRicardo.saldo)
+	fmt.Println(status, saldo)
 }
