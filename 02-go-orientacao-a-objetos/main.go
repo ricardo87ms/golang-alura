@@ -7,6 +7,14 @@ import (
 	"github.com/ricardo87ms/02-go-orientacao-a-objetos/contas"
 )
 
+func PagarBoleto(conta verificarConta, valorBoleto float64) {
+	conta.Sacar(valorBoleto)
+}
+
+type verificarConta interface {
+	Sacar(valor float64) string
+}
+
 func main() {
 
 	contaRicardo := contas.ContaCorrente{
@@ -22,6 +30,9 @@ func main() {
 
 	fmt.Println(contaRicardo)
 	fmt.Println(contaTatiele)
+
+	PagarBoleto(&contaRicardo, 140)
+	PagarBoleto(&contaTatiele, 85)
 
 	fmt.Println("Ricardo", contaRicardo.ObterSaldo())
 	fmt.Println("Tatiele", contaTatiele.ObterSaldo())
