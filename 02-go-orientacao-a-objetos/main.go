@@ -10,18 +10,21 @@ import (
 func main() {
 
 	contaRicardo := contas.ContaCorrente{
-		Titular: clientes.Titular{Nome: "Ricardo", CPF: "111111111", Profissao: "Desenvolvedor"},
-		Saldo:   300}
+		Titular: clientes.Titular{Nome: "Ricardo", CPF: "111111111", Profissao: "Desenvolvedor"}}
+
+	contaRicardo.Depositar(300)
 
 	clienteTatiele := clientes.Titular{Nome: "Tatiele", CPF: "222222222", Profissao: "Desenvolvedora"}
 
-	contaTatiele := contas.ContaCorrente{Titular: clienteTatiele, Saldo: 100}
+	contaTatiele := contas.ContaCorrente{Titular: clienteTatiele}
+
+	contaTatiele.Depositar(100)
 
 	fmt.Println(contaRicardo)
 	fmt.Println(contaTatiele)
 
 	contaRicardo.Transferir(200, &contaTatiele)
 
-	fmt.Println(contaRicardo)
-	fmt.Println(contaTatiele)
+	fmt.Println("Ricardo", contaRicardo.ObterSaldo())
+	fmt.Println("Tatiele", contaTatiele.ObterSaldo())
 }
