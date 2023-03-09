@@ -16,14 +16,12 @@ func main() {
 
 	clienteTatiele := clientes.Titular{Nome: "Tatiele", CPF: "222222222", Profissao: "Desenvolvedora"}
 
-	contaTatiele := contas.ContaCorrente{Titular: clienteTatiele}
+	contaTatiele := contas.ContaPoupanca{Titular: clienteTatiele}
 
 	contaTatiele.Depositar(100)
 
 	fmt.Println(contaRicardo)
 	fmt.Println(contaTatiele)
-
-	contaRicardo.Transferir(200, &contaTatiele)
 
 	fmt.Println("Ricardo", contaRicardo.ObterSaldo())
 	fmt.Println("Tatiele", contaTatiele.ObterSaldo())
