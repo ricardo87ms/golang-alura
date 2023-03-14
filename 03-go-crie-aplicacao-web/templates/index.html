@@ -32,18 +32,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {{ range . }}
                         <tr>
-                            <td>Bola de Futebol</td>
-                            <td>Bola muito bonita</td>
-                            <td>50</td>
-                            <td>10</td>
+                            <td>{{ .Nome }}</td>
+                            <td>{{ .Descricao }}</td>
+                            <td>{{ .Valor }}</td>
+                            <td>{{ .Quantidade }}</td>
                         </tr>
-                        <tr>
-                            <td>Camiseta São Paulo</td>
-                            <td>numero 3</td>
-                            <td>300</td>
-                            <td>5</td>
-                        </tr>
+                        {{ end }}
                     </tbody>
                 </table>
             </div>
