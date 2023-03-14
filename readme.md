@@ -6,7 +6,9 @@ Repositório dos cursos que fazem parte da formação **Go: a linguagem de progr
 
 * [Go: a linguagem do Google](01-go-a-linguagem-do-google) - ✅ [Certificado](https://cursos.alura.com.br/certificate/ricardo87ms/golang)
 
-* [Go: Orientação a Objetos](02-go-orientacao-a-objetos) - 💻 [Em Andamento]
+* [Go: Orientação a Objetos](02-go-orientacao-a-objetos) - ✅ [Certificado](https://cursos.alura.com.br/certificate/ricardo87ms/go-lang-oo)
+
+* [Go: Orientação a Objetos](03-go-crie-aplicacao-web) - 💻 [Em Andamento]
 
 
 ## Linguagem
