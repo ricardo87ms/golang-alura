@@ -8,7 +8,7 @@ Repositório dos cursos que fazem parte da formação **Go: a linguagem de progr
 
 * [Go: Orientação a Objetos](02-go-orientacao-a-objetos) - ✅ [Certificado](https://cursos.alura.com.br/certificate/ricardo87ms/go-lang-oo)
 
-* [Go: Orientação a Objetos](03-go-crie-aplicacao-web) - 💻 [Em Andamento]
+* [Go: crie uma aplicação web](03-go-crie-aplicacao-web) - 💻 [Em Andamento]
 
 
 ## Linguagem
