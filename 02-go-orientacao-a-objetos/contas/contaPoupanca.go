@@ -1,6 +1,6 @@
 package contas
 
-import "github.com/ricardo87ms/02-go-orientacao-a-objetos/clientes"
+import "github.com/ricardo87ms/golang-alura/02-go-orientacao-a-objetos/clientes"
 
 type ContaPoupanca struct {
 	Titular       clientes.Titular

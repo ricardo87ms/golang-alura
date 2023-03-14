@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/ricardo87ms/02-go-orientacao-a-objetos/clientes"
-	"github.com/ricardo87ms/02-go-orientacao-a-objetos/contas"
+	"github.com/ricardo87ms/golang-alura/02-go-orientacao-a-objetos/clientes"
+	"github.com/ricardo87ms/golang-alura/02-go-orientacao-a-objetos/contas"
 )
 
 func PagarBoleto(conta verificarConta, valorBoleto float64) {
